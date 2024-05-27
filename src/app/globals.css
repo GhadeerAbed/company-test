@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  position: relative;
+}
+
+.notification::before {
+  content: "";
+  top: 50%;
+  position: absolute;
+  width: 2px;
+  height: 25px;
+  background-color:#D9D9D9;
+  left: 13%;
+  transform: translateY(-50%);
+}
+@media (max-width:660px){
+  .notification::before {
+    display: none;
+  }
+}
+.sidebar{
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+.main {
+  width: calc(100% - 300px);
+  position:relative ;
+  left:277px;
+  top: 100px;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+.mainSlide {
+  width: calc(100% - 300px);
+  position:relative ;
+  left:77px;
+  top:100px;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+
+@layer components{
+  .arrow-select{
+    @apply bg-[#F9F9F9] rounded-full w-[20px] h-[20px] flex justify-center items-center cursor-pointer
+  }
+}
+
+.range{
+  accent-color: #17AA9D;
+   /* width: 400px; */
+}
+
+.aside{
+  top: 74px;
+
+}
+@media (max-width:660px){
+  .hero {
+    width: calc(100% - 77px);
+  }
+}
+
